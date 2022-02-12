@@ -32,7 +32,7 @@ drives or a cassette tape are not required.  Note that the current
 version of TRS-IO does not work with the TRS-80 Model I.
 
 ### BUILD INSTRUCTIONS
-See BUILD INSTRUCTIONS.txt
+See [BUILD INSTRUCTIONS.txt](https://github.com/AdamM-AU/TRS-IO/blob/master/BUILD%20INSTRUCTIONS.txt)
 
 OR download the latest release precompiled!
 
