@@ -1,0 +1,32 @@
+#TRS-IO - Build Instructions
+#OS: Debian 11
+
+#Install Prerequisites:
+#Packages for Espressif
+sudo apt-get -y install git wget flex bison gperf python3 python3-pip python3-setuptools cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
+
+#Packages for TRS-IO
+sudo apt-get -y install z80asm sdcc sdcc-libraries
+
+# Some Fixes for linking libraries thats needed by TRS-IO
+sudo mkdir -p /lib/z80/
+sudo ln -s /usr/share/sdcc/lib/z80/z80.lib /lib/z80/z80.lib
+
+#Python3 as default:
+sudo apt-get install python3 python3-pip python3-setuptools
+sudo ln -s /usr/bin/python3 /usr/bin/python
+
+#ESP-IDF (Blanket Install Everything):
+mkdir -p ~/esp
+cd ~/esp
+git clone -b v4.2 --recursive https://github.com/espressif/esp-idf.git
+cd ~/esp/esp-idf
+export IDF_GITHUB_ASSETS="dl.espressif.com/github_assets"
+./install.sh
+. $HOME/esp/esp-idf/export.sh
+
+#CHECK OUT TRS-IO
+cd ~/esp
+git clone --recursive https://github.com/apuder/TRS-IO.git
+cd TRS-IO
+make all
