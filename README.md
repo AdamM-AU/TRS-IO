@@ -31,6 +31,10 @@ TRS-IO requires a TRS-80 Model III with 48 kB of RAM. Floppy disk
 drives or a cassette tape are not required.  Note that the current
 version of TRS-IO does not work with the TRS-80 Model I.
 
+### BUILD INSTRUCTIONS
+See BUILD INSTRUCTIONS.txt
+
+OR download the latest release precompiled!
 
 ### Setting up TRS-IO
 
